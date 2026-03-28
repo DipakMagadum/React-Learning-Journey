@@ -1,7 +1,7 @@
 export function Home(){
     return(
         <>
-        <nav>
+        <nav className="flex bg-sky-600">
             <ul>
                 <li>Login</li>
                 <li>Register</li>

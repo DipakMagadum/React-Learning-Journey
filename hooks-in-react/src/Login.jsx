@@ -4,11 +4,11 @@ const [username, setUsername] = useState("");
 const [password, setPass] = useState("");
     return(
         <>
-        <div className="">
-            <form>
-                <h1>Login</h1>
+        <div className="flex justify-center items-center h-screen">
+            <form className="flex flex-col bg-white shadow-xl/30 p-6 gap-4 w-70">
+                <h1 className="text-center text-sky-600 text-xl font-bold">Login</h1>
                 <label>Username</label>
-                <input
+                <input className="border p-1 rounded "
                 type="text"
                 placeholder="Username"
                 value={username}
@@ -16,14 +16,14 @@ const [password, setPass] = useState("");
                 />
 
                 <label>Password</label>
-                <input
+                <input  className="border p-1 rounded "
                 type="password"
                 placeholder="password"
                 value={password}
                 onChange={(e)=>setPass(e.target.value)}
                 />
 
-                <button>Login</button>
+                <button className="bg-sky-600 p-1 rounded-xl">Login</button>
             </form>
         </div>
         </>

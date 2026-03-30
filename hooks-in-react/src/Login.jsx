@@ -64,7 +64,7 @@ const [msg, setMsg] = useState("");
                 />
             <p className="text-red-700">{error.password}</p>
                 <button className="bg-sky-600 p-1 rounded-xl">Login</button>
-                <span>Don't have Accout? <Link className="text-sky-700" to="/register">Login</Link></span>
+                <span>Don't have Accout? <Link className="text-sky-700" to="/register">Register</Link></span>
             </form>
         </div>
         </>

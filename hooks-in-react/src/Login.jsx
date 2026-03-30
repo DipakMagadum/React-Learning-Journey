@@ -1,4 +1,5 @@
 import {useState} from "react"
+import {Link} from "react-router-dom"
 export function Login(){
 const [username, setUsername] = useState("");
 const [password, setPass] = useState("");
@@ -63,6 +64,7 @@ const [msg, setMsg] = useState("");
                 />
             <p className="text-red-700">{error.password}</p>
                 <button className="bg-sky-600 p-1 rounded-xl">Login</button>
+                <span>Don't have Accout? <Link className="text-sky-700" to="/register">Login</Link></span>
             </form>
         </div>
         </>

@@ -5,7 +5,7 @@ const [password, setPass] = useState("");
 const [error, setError] = useState({username:"",password:""});
 const [msg, setMsg] = useState("");
 
-        validate=(e)=>{
+       const validate=(e)=>{
             e.preventDefault();
 
             let NewError={username:"",password:""}
@@ -43,6 +43,7 @@ const [msg, setMsg] = useState("");
             
             className="flex flex-col bg-white shadow-xl/30 p-6 gap-4 w-70">
                 <h1 className="text-center text-sky-600 text-xl font-bold">Login</h1>
+                <p>{msg}</p>
                 <label>Username</label>
                 <input className="border p-1 rounded "
                 type="text"
@@ -50,7 +51,7 @@ const [msg, setMsg] = useState("");
                 value={username}
                 onChange={(e)=>setUsername(e.target.value)}
                 />
-            <p>{error}</p>
+            <p>{error.username}</p>
                 <label>Password</label>
                 <input  className="border p-1 rounded "
                 type="password"
@@ -58,7 +59,7 @@ const [msg, setMsg] = useState("");
                 value={password}
                 onChange={(e)=>setPass(e.target.value)}
                 />
-            <p>{error}</p>
+            <p>{error.password}</p>
                 <button className="bg-sky-600 p-1 rounded-xl">Login</button>
             </form>
         </div>

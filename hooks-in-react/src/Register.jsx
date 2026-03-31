@@ -9,11 +9,20 @@ export function Register(){
 
     useEffect=(()=>{
         let NewError={username:"",email:"",password:"",cpass:""}
-        let validate=true;
+
         if(username === ""){
             NewError.username="Enter username"
-            validate=false;
         }
+        if(email=== ""){
+            NewError.password="Enter Email"; 
+        }
+        if(password === ""){
+            NewError.password="Enter Password"; 
+        }
+        if(cpass === ""){
+             NewError.cpass="Enter Confirm Password";
+        }
+        setError(NewError);
 
     },[username,email,password,cpass])
     return(

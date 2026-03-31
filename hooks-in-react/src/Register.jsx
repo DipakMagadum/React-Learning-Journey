@@ -40,7 +40,7 @@ export function Register(){
             value={username}
             onChange={(e)=>setUsername(e.target.value)}
             />
-            <p>{error.username}</p>
+            <p  className="text-red-500">{error.username}</p>
 
             <label>Email</label>
             <input className="border p-1 rounded-xl"
@@ -49,7 +49,7 @@ export function Register(){
             value={email}
             onChange={(e)=>setEmail(e.target.value)}
             />
-            <p>{error}</p>
+            <p  className="text-red-500">{error.email}</p>
 
              <label>Password</label>
             <input className="border p-1 rounded-xl"
@@ -58,7 +58,7 @@ export function Register(){
             value={password}
             onChange={(e)=>setPassword(e.target.value)}
             />
-            <p>{error}</p>
+            <p  className="text-red-500">{error.password}</p>
 
              <label>Confirm Password</label>
             <input className="border p-1 rounded-xl"
@@ -67,7 +67,7 @@ export function Register(){
             value={cpass}
             onChange={(e)=>setCpass(e.target.value)}
             />
-            <p>{error}</p>
+            <p className="text-red-500">{error.cpass}</p>
 
             <button className="text-white bg-sky-500 p-1 rounded-2xl mt-3">Register</button>
 

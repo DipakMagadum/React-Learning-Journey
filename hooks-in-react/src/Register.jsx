@@ -1,5 +1,10 @@
-import {Link} from "react-router-dom"
+import {useState} from "react";
+import {Link} from "react-router-dom";
 export function Register(){
+    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [cpass, setCpass] = useState("");
     return(
         <>
         <div className="flex justify-center items-center h-screen">
@@ -12,24 +17,32 @@ export function Register(){
             <input className="border p-1 rounded-xl"
             type="text"
             placeholder="Username"
+            value={username}
+            onChange={(e)=>setUsername(e.target.value)}
             />
 
             <label>Email</label>
             <input className="border p-1 rounded-xl"
              type="email"
             placeholder="Email"
+            value={email}
+            onChange={(e)=>setEmail(e.target.value)}
             />
 
              <label>Password</label>
             <input className="border p-1 rounded-xl"
              type="password"
             placeholder="Password"
+            value={password}
+            onChange={(e)=>setPassword(e.target.value)}
             />
 
              <label>Confirm Password</label>
             <input className="border p-1 rounded-xl"
              type="password"
             placeholder="Confirm Password"
+            value={cpass}
+            onChange={(e)=>setCpass(e.target.value)}
             />
 
             <button className="text-white bg-sky-500 p-1 rounded-2xl mt-3">Register</button>

@@ -7,14 +7,14 @@ export function Register(){
     const [cpass, setCpass] = useState("");
     const [error, setError] = useState({username:"",email:"",password:"",cpass:""});
 
-    useEffect=(()=>{
+    useEffect(()=>{
         let NewError={username:"",email:"",password:"",cpass:""}
 
         if(username === ""){
             NewError.username="Enter username"
         }
         if(email=== ""){
-            NewError.password="Enter Email"; 
+            NewError.email="Enter Email"; 
         }
         if(password === ""){
             NewError.password="Enter Password"; 

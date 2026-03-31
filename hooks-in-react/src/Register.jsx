@@ -1,10 +1,14 @@
-import {useState} from "react";
+import {useState,useEffect} from "react";
 import {Link} from "react-router-dom";
 export function Register(){
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [cpass, setCpass] = useState("");
+
+    useEffect=(()=>{
+
+    },[username,email,password,cpass])
     return(
         <>
         <div className="flex justify-center items-center h-screen">

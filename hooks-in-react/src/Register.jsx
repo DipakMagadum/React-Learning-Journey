@@ -5,8 +5,15 @@ export function Register(){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [cpass, setCpass] = useState("");
+    const [error, setError] = useState({username:"",email:"",password:"",cpass:""});
 
     useEffect=(()=>{
+        let NewError={username:"",email:"",password:"",cpass:""}
+        let validate=true;
+        if(username === ""){
+            NewError.username="Enter username"
+            validate=false;
+        }
 
     },[username,email,password,cpass])
     return(
@@ -24,6 +31,7 @@ export function Register(){
             value={username}
             onChange={(e)=>setUsername(e.target.value)}
             />
+            <p>{error.username}</p>
 
             <label>Email</label>
             <input className="border p-1 rounded-xl"
@@ -32,6 +40,7 @@ export function Register(){
             value={email}
             onChange={(e)=>setEmail(e.target.value)}
             />
+            <p>{error}</p>
 
              <label>Password</label>
             <input className="border p-1 rounded-xl"
@@ -40,6 +49,7 @@ export function Register(){
             value={password}
             onChange={(e)=>setPassword(e.target.value)}
             />
+            <p>{error}</p>
 
              <label>Confirm Password</label>
             <input className="border p-1 rounded-xl"
@@ -48,6 +58,7 @@ export function Register(){
             value={cpass}
             onChange={(e)=>setCpass(e.target.value)}
             />
+            <p>{error}</p>
 
             <button className="text-white bg-sky-500 p-1 rounded-2xl mt-3">Register</button>
 

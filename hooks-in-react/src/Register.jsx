@@ -32,6 +32,10 @@ export function Register(){
         if(cpass === ""){
              NewError.cpass="Enter Confirm Password";
         }
+
+        if(!password === cpass){
+            NewError.cpass="Password do not match"
+        }
         setError(NewError);
 
     },[username,email,password,cpass])

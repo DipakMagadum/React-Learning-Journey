@@ -1,4 +1,4 @@
-import {useState} from "react"
+import {useState,useEffect} from "react"
 import {Link} from "react-router-dom"
 export function Login(){
 const [username, setUsername] = useState("");
@@ -6,42 +6,45 @@ const [password, setPass] = useState("");
 const [error, setError] = useState({username:"",password:""});
 const [msg, setMsg] = useState("");
 
-       const validate=(e)=>{
-            e.preventDefault();
 
-            let NewError={username:"",password:""}
-            let validate=true;
+        useEffect = ()=>{
+
+         let NewError={username:"",password:""}
+            
               const passwordpattern=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/;
-
 
             if(username.trim() === ""){
                 NewError.username="Username Required !";
-                validate=false;
+                
             }
             else if(username.length < 2){
                 NewError.username="Username atleast 4 char long";
-                validate=false;
+                
             }
             if(password === ""){
                 NewError.password="Password Required !";
-                validate=false;
+                
             }
             else if(password.length < 8){
                 NewError.password="Password must be 8 char long";
-                validate=false;
+                
             }
             else if(!passwordpattern.test(password)){
                 NewError.password="invalid Password"
             }
-            if(validate){
-                setMsg("Login Successful");
+            setError(NewError);
+        }
+
+       const validate=(e)=>{
+            e.preventDefault();
+
+            if(!error.username && !error.password){
+                setMsg("Login Successful")
             }
             else{
                 setMsg("")
             }
-            setError(NewError);
-        }
-
+       }
     return(
         <>
         <div className="flex justify-center items-center h-screen">
@@ -52,6 +55,7 @@ const [msg, setMsg] = useState("");
                 <h1 className="text-center text-sky-600 text-xl font-bold">Login</h1>
 
                 <p className="text-center text-xl text-green-400">{msg}</p>
+
                 <label>Username</label>
                 <input className="border p-1 rounded "
                 type="text"

@@ -1,13 +1,15 @@
 import {useState,useEffect} from "react"
 import {Link} from "react-router-dom"
+import { Eye, EyeOff } from "lucide-react";
 export function Login(){
 const [username, setUsername] = useState("");
 const [password, setPass] = useState("");
 const [error, setError] = useState({username:"",password:""});
 const [msg, setMsg] = useState("");
+const [showpass, setSPass] = useState(false)
 
 
-        useEffect = ()=>{
+        useEffect=(()=>{
 
          let NewError={username:"",password:""}
             
@@ -33,7 +35,7 @@ const [msg, setMsg] = useState("");
                 NewError.password="invalid Password"
             }
             setError(NewError);
-        }
+          },[username,password])
 
        const validate=(e)=>{
             e.preventDefault();
@@ -66,14 +68,22 @@ const [msg, setMsg] = useState("");
             <p className="text-red-700">{error.username}</p>
 
                 <label>Password</label>
+                 <div className="relative inline-block w-full max-w-sm">
                 <input  className="border p-1 rounded "
-                type="password"
+                type={showpass ? "text" : "password"}
                 placeholder="password"
                 value={password}
                 onChange={(e)=>setPass(e.target.value)}
                 />
+                 <span
+               onClick={() => setSPass(!showpass)}
+              className="absolute right-3 top-1/3 cursor-pointer text-gray-600"
+           >
+                {showpass ? <EyeOff/>  :<Eye/> }
+              </span>
+                </div>
 
-                
+
             <p className="text-red-700">{error.password}</p>
                 <button className="bg-sky-600 p-1 rounded-xl">Login</button>
                 <span>Don't have Accout? <Link className="text-sky-700" to="/register">Register</Link></span>

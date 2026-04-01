@@ -79,7 +79,7 @@ const [showpass, setSPass] = useState(false)
                onClick={() => setSPass(!showpass)}
               className="absolute right-3 top-1/3 cursor-pointer text-gray-600"
            >
-                {showpass ? <EyeOff/>  :<Eye/> }
+                {showpass ? <EyeOff size={20}/>  :<Eye size={20}/> }
               </span>
                 </div>
 

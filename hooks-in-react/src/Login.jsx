@@ -64,6 +64,7 @@ const [msg, setMsg] = useState("");
                 onChange={(e)=>setUsername(e.target.value)}
                 />
             <p className="text-red-700">{error.username}</p>
+
                 <label>Password</label>
                 <input  className="border p-1 rounded "
                 type="password"
@@ -71,6 +72,8 @@ const [msg, setMsg] = useState("");
                 value={password}
                 onChange={(e)=>setPass(e.target.value)}
                 />
+
+                
             <p className="text-red-700">{error.password}</p>
                 <button className="bg-sky-600 p-1 rounded-xl">Login</button>
                 <span>Don't have Accout? <Link className="text-sky-700" to="/register">Register</Link></span>

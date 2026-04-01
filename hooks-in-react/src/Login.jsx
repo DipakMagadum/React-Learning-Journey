@@ -9,7 +9,7 @@ const [msg, setMsg] = useState("");
 const [showpass, setSPass] = useState(false)
 
 
-        useEffect=(()=>{
+        useEffect (()=>{
 
          let NewError={username:"",password:""}
             
@@ -40,7 +40,7 @@ const [showpass, setSPass] = useState(false)
        const validate=(e)=>{
             e.preventDefault();
 
-            if(!error.username && !error.password){
+            if( username && password && !error.username && !error.password){
                 setMsg("Login Successful")
             }
             else{
@@ -79,7 +79,7 @@ const [showpass, setSPass] = useState(false)
                onClick={() => setSPass(!showpass)}
               className="absolute right-3 top-1/3 cursor-pointer text-gray-600"
            >
-                {showpass ? <EyeOff size={20}/>  :<Eye size={20}/> }
+                {showpass ? <EyeOff size={20}/>  : <Eye size={20} />}
               </span>
                 </div>
 

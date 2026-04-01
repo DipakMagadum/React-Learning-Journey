@@ -85,7 +85,8 @@ export function Register(){
 
             <button className="text-white bg-sky-500 p-1 rounded-2xl mt-3">Register</button>
 
-            <span>Have an Account ? <Link className="text-sky-500">Login</Link></span>
+            <span>Have an Account ? <Link  to="/"
+            className="text-sky-500">Login</Link></span>
             </form>
         </div>
         </>

@@ -10,14 +10,24 @@ export function Register(){
     useEffect(()=>{
         let NewError={username:"",email:"",password:"",cpass:""}
 
+         const emailPattern = /^[a-z0-9._%+-]+@(gmail|yahoo|outlook|hotmail)\.(com|in)$/;
+        const passwordpattern=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/;
+
         if(username === ""){
             NewError.username="Enter username"
         }
         if(email=== ""){
             NewError.email="Enter Email"; 
         }
+
+         else if(!emailPattern.test(email)){
+            NewError.email="Invalid Email"
+         }
         if(password === ""){
             NewError.password="Enter Password"; 
+        }
+        else if(!passwordpattern.test(password)){
+            NewError.password="Invalid Password"
         }
         if(cpass === ""){
              NewError.cpass="Enter Confirm Password";

@@ -11,6 +11,8 @@ const [msg, setMsg] = useState("");
 
             let NewError={username:"",password:""}
             let validate=true;
+              const passwordpattern=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/;
+
 
             if(username.trim() === ""){
                 NewError.username="Username Required !";
@@ -27,6 +29,9 @@ const [msg, setMsg] = useState("");
             else if(password.length < 8){
                 NewError.password="Password must be 8 char long";
                 validate=false;
+            }
+            else if(!passwordpattern.test(password)){
+                NewError.password="invalid Password"
             }
             if(validate){
                 setMsg("Login Successful");

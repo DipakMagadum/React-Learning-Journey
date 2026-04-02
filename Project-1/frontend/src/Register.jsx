@@ -11,10 +11,9 @@ export function Register(){
 
             <Input
             label="Username"
-            type=""
-            value=""
-            onChange=""
+            placeholder="Username"
             />
+           
 
             </form>
         </div>

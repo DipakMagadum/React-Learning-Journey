@@ -9,6 +9,12 @@ export function Input({label,placeholder}){
         if(input === ""){
             setError(" is Required")
         }
+        else if(input.length < 4){
+            setError(" must be 4 char long")
+        }
+        else{
+            setError("")
+        }
         
     },[input])
     return(

@@ -16,8 +16,11 @@ export function Register(){
             />
 
             <Email 
-            label="Email
-            "
+            label="Email"
+            />
+
+            <Password
+            label="Password"
             />
            
 

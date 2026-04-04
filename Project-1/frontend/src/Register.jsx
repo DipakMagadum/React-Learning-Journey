@@ -15,7 +15,10 @@ export function Register(){
             placeholder="Username"
             />
 
-            <Email />
+            <Email 
+            label="Email
+            "
+            />
            
 
             </form>

@@ -26,7 +26,7 @@ export function Input({label,placeholder}){
         value={input}
         onChange={(e)=>setInput(e.target.value)}
         />
-        {error && <p className="text-red-600">{label}{error}</p>}
+        {error && <p className="text-red-600">{error}</p>}
         </>
     )
 }

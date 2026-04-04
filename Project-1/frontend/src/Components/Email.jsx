@@ -1,7 +1,14 @@
-import {useState} from "react"
+import {useState,useEffect} from "react"
 export function Email(label){
-    const[email, setEmail] = useState("")
-    
+    const[email, setEmail] = useState("");
+    const[error,setError] = useState("");
+
+    useEffect(()=>{
+
+        if(email === ""){
+            setError("Enter Email")
+        }
+    },[email])
     return(
         <>
         <label>{label}</label>

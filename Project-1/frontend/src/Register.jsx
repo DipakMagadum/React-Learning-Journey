@@ -1,3 +1,4 @@
+import { Email } from "./Components/Email";
 import { Input } from "./Components/Input";
 
 export function Register(){
@@ -13,6 +14,8 @@ export function Register(){
             label="Username"
             placeholder="Username"
             />
+
+            <Email />
            
 
             </form>

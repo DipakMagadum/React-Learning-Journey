@@ -1,5 +1,5 @@
 import {useState,useEffect} from "react"
-export function Email(label){
+export function Email({label}){
     const[email, setEmail] = useState("");
     const[error,setError] = useState("");
 
@@ -7,6 +7,9 @@ export function Email(label){
 
         if(email === ""){
             setError("Enter Email")
+        }
+        else{
+            setError("")
         }
     },[email])
     return(
@@ -19,7 +22,7 @@ export function Email(label){
         value={email}
         onChange={(e)=>setEmail(e.target.value)}
         />
-         {error && <p className="text-red-600">{label}{error}</p>}
+         {error && <p className="text-red-600">{error}</p>}
         </>
     )
 }

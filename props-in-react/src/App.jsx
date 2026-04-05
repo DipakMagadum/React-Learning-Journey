@@ -1,8 +1,7 @@
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
    <>
+   <h1 className="text-center text-red-700 h-screen">React Props</h1>
    </>
   )
 }

@@ -7,7 +7,15 @@ function App() {
   <h1 className='bg-green-400 text-white text-center text-xl p-4 rounded-xl w-80 '>Props In React</h1>
     </div>
 
-    <Card/>
+    <Card 
+    name="Naruto"
+    btnText="Click"
+    />
+
+    <Card
+    name="Sasuke"
+    btnText="click Me"
+    />
    </>
   )
 }

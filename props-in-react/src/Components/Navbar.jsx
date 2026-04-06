@@ -4,7 +4,7 @@ function Navbar({items}) {
   return (
     <>
   
-        <ul className="flex justify-end bg-sky-500 text-white gap-7 p-3 ">
+        <ul className="flex justify-end bg-sky-500 text-white gap-7 p-3  hover: border rounded">
             {items.map((item,index)=>(
                 <li key={index}>{item}</li>
             ))}

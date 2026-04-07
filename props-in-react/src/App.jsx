@@ -1,4 +1,4 @@
-
+import Button from "./Components/Button"
 import Card from "./Components/Card"
 import Navbar from "./Components/Navbar"
 function App() {
@@ -21,6 +21,9 @@ function App() {
     <Card
     name="Sasuke"
     btnText="click Me"
+    />
+    <Button 
+    btnText="submit"
     />
    </>
   )

@@ -1,4 +1,5 @@
 import {useState} from "react"
+import Home from "./Home"
 function App() {
   const [show, setShow] = useState(false)
   return (
@@ -7,7 +8,7 @@ function App() {
 
     <button onClick={()=>setShow(!show)}>Show/hide</button>
 
-    {show ? <h3>hello</h3>:null}
+    {show ? <Home/>:null}
   </>
   )
 }

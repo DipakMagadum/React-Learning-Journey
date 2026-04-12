@@ -1,5 +1,5 @@
 import {useState,useEffect} from "react"
-export function Password(label){
+export function Password({label}){
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
 
@@ -16,6 +16,7 @@ export function Password(label){
         <>
         <label>{label}</label>
         <input
+        className="border rounded p-1"
         type="password"
         placeholder="password"
         value={password}

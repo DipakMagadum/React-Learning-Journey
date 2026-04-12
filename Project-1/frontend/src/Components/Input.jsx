@@ -7,7 +7,7 @@ export function Input({label,placeholder}){
     useEffect(()=>{
         
         if(input === ""){
-            setError(" is Required")
+            setError(" Username Required")
         }
         else if(input.length < 4){
             setError(" must be 4 char long")

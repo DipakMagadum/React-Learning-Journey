@@ -1,6 +1,6 @@
 import { Email } from "./Components/Email";
 import { Input } from "./Components/Input";
-
+import {Password} from "./Components/Password"
 export function Register(){
     return(
         <>

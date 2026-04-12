@@ -1,3 +1,4 @@
+import Button from "./Components/Button";
 import { Email } from "./Components/Email";
 import { Input } from "./Components/Input";
 import {Password} from "./Components/Password"
@@ -23,6 +24,9 @@ export function Register(){
             label="Password"
             />
            
+           <Button
+           name="Register"
+           />
 
             </form>
         </div>

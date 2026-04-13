@@ -22,6 +22,7 @@ export function Password({label}){
         value={password}
         onChange={(e)=>setPassword(e.target.value)}
         />
+         {error && <p className="text-red-600">{error}</p>}
         </>
     )
 }

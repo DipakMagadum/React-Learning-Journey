@@ -1,6 +1,7 @@
 import Button from "./Components/Button"
 import Card from "./Components/Card"
 import Navbar from "./Components/Navbar"
+import Information from "./Container/Information"
 function App() {
   return (
    <>
@@ -25,6 +26,9 @@ function App() {
     <Button 
     btnText="submit"
     />
+
+    <Information/>
+     
    </>
   )
 }

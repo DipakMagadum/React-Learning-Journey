@@ -9,12 +9,15 @@ function Password({label}) {
     
     <>
     <label>{label}</label>
-    <input className="  border border-black rounded p-1  "
+
+    <div className=" relative">
+        <input className="  border border-black rounded p-1  "
     type={showPassword?"text":"password"} //this is a ternary operator Syntax: condition ? value_if_true : value_if_false.
     placeholder="password"
 
     />
-    <div>
+    </div>
+    <div className="absolute mx-40 my-9">
          <button 
          type="button"
          onClick={()=>setShowPassword(!showPassword)}

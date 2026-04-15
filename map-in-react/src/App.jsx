@@ -6,8 +6,8 @@ function App() {
   return (
     <>
 
-    <h1>Student detail using Map </h1>
-    <StudentDetail />
+    <h1 className="text-center mt-5 mb-5">Student detail using Map </h1>
+    <StudentDetail/>
     </>
   )
 }

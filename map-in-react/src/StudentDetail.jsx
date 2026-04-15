@@ -30,29 +30,33 @@ function StudentDetail() {
     ];
   return (
     <>
-    <table>
-        <thead>
-            <tr>
-                <th>Roll No</th>
+    <div className="flex justify-center">
+         <table className="border border-black" >
+        <thead className="border border-black">
+            <tr >
+                <th >Roll No</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>City</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody >
            {
     studentData.map((student)=>(
-        <tr>
-            <td>{student.rollNo}</td>
-            <td>{student.name}</td>
-            <td>{student.email}</td>
-            <td>{student.city}</td>
+        <tr className="border border-black"
+            key={student.rollNo}
+        >
+            <td className="border border-black">{student.rollNo}</td>
+            <td className="border border-black">{student.name}</td>
+            <td className="border border-black">{student.email}</td>
+            <td className="border border-black">{student.city}</td>
         </tr>
     ))
-
            }
         </tbody>
     </table>
+    </div>
+   
     
     </>
   )

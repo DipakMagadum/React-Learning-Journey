@@ -1,8 +1,13 @@
+import StudentDetail from "./StudentDetail"
+
 function App() {
 
-  
+
   return (
     <>
+
+    <h1>Student detail using Map </h1>
+    <StudentDetail />
     </>
   )
 }

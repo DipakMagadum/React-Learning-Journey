@@ -13,7 +13,14 @@ function App() {
     console.log("useEffect in react")
     
   }
- 
+useEffect(()=>{
+  hello2();
+},[])
+
+ function hello2(){
+
+  console.log("hello 2")
+ }
   return (
     <>
     <h1 className=" text-2xl text-center mt-5 font-semibold text-fuchsia-500">useEffect In react</h1>

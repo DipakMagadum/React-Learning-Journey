@@ -15,7 +15,7 @@ function App() {
   }
 useEffect(()=>{
   hello2();
-},[])
+},[Countreverse])
 
  function hello2(){
 

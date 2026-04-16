@@ -1,16 +1,104 @@
-# React + Vite
+##  useEffect in React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+`useEffect` is a React Hook that lets you run side effects in your components.
 
-Currently, two official plugins are available:
+In simple words, it allows you to perform actions **after the component renders**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+###  Why do we use useEffect?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+In React, components re-render when state or props change. Sometimes, we want to run extra logic after that happens, like:
 
-## Expanding the ESLint configuration
+* Fetching data from an API
+* Updating the DOM manually
+* Running a function when a value changes
+* Setting up timers or subscriptions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+That’s where `useEffect` comes in.
+
+---
+
+###  Basic Syntax
+
+```javascript
+useEffect(() => {
+  // your logic here
+}, [dependencies]);
+```
+
+---
+
+###  How it works
+
+* The function inside `useEffect` runs after rendering
+* The dependency array controls **when it runs**
+
+---
+
+###  Different Cases
+
+#### 1. Run on every render
+
+```javascript
+useEffect(() => {
+  console.log("Runs on every render");
+});
+```
+
+ No dependency array → runs every time the component updates
+
+---
+
+#### 2. Run only once (on initial render)
+
+```javascript
+useEffect(() => {
+  console.log("Runs only once");
+}, []);
+```
+
+ Empty array → runs only when the component mounts
+
+---
+
+#### 3. Run when a specific value changes
+
+```javascript
+useEffect(() => {
+  console.log("Count changed");
+}, [count]);
+```
+
+ Runs only when `count` changes
+
+---
+
+###  Example (Simple Counter)
+
+```javascript
+useEffect(() => {
+  console.log("Count updated:", count);
+}, [count]);
+```
+
+Here, every time `count` changes, this effect will run.
+
+---
+
+###  Important Note
+
+* `useEffect` runs **after rendering**, not before
+* It helps keep your component clean by separating logic from UI
+* Be careful with dependencies, or it may run more times than expected
+
+---
+
+###  Summary
+
+* `useEffect` is used for side effects
+* It runs after render
+* Dependency array controls when it runs
+* It is one of the most important hooks in React
+
+---

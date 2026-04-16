@@ -4,8 +4,9 @@ function App() {
   const [count, setCount] = useState(0);
   const [Countreverse,setCountReverse] =useState(0);
 
+  // useEffect runs whenever the count state value updates
   useEffect(()=>{
-     hello();
+     hello(); 
   },[count])
 
   function hello() {

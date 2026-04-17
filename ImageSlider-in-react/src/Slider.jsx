@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import img1 from "./assets/img1.jpg";
 import img2 from "./assets/img2.jpg";
 import img3 from "./assets/img3.jpg";
 
 function Slider() {
   const [index, setIndex] = useState(0);
-
   const data = [
     { id: 1, img: img1 },
     { id: 2, img: img2 },

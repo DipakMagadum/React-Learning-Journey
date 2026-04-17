@@ -50,7 +50,7 @@ function Slider() {
         <img
           src={data[index].img}
           alt=""
-          className="w-full h-[350px] object-cover rounded"
+          className="w-full h-[350px] object-cover rounded transition-all duration-700"
         />
 
         <h3 className="mt-2">{data[index].text}</h3>

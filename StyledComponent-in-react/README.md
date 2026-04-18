@@ -1,16 +1,41 @@
-# React + Vite
+## Styled Components in React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+In this project, I explored **styled-components** as a way to style React applications more effectively. Instead of writing separate CSS files, styled-components allows styling directly inside JavaScript using component-based architecture.
 
-Currently, two official plugins are available:
+### Why I used styled-components
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+While working on this project, I wanted a cleaner and more scalable approach to styling. Styled-components helped me keep styles close to the components, which made the code easier to read and maintain.
 
-## React Compiler
+### What I implemented
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Created reusable styled components like headings, paragraphs, buttons, and a navbar
+* Used both **template literal syntax** and **object-based styling**
+* Applied basic layout techniques like flexbox for the navbar
+* Added simple hover effects for better user interaction
 
-## Expanding the ESLint configuration
+### Key benefits I noticed
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Improved code organization
+* No class name conflicts (automatic scoping)
+* Easier to manage reusable UI components
+* Better readability compared to traditional CSS files
+
+### Example
+
+Here’s a simple example of how I used styled-components:
+
+```js
+const Button = styled.button`
+  padding: 8px 12px;
+  border: 1px solid green;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lightgreen;
+  }
+`;
+```
+
+### My learning
+
+Working with styled-components helped me understand how styling can be tightly integrated with React components. It also gave me a better idea of building reusable and scalable UI components, which is important for real-world projects.

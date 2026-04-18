@@ -23,6 +23,13 @@ function App() {
         backgroundColor:"gray",
       }
     )
+
+    const Btn = styled.button`
+    text-align:center;
+    padding:3px;
+    border:1px solid green;
+    cursor:pointer;
+    `
   return (
     <>
     <h1>Styled-Component In React-js</h1>
@@ -42,6 +49,10 @@ function App() {
 
     {/* styled-component heading using boject */}
     <Heading2>This is a Heading Created by Styled-component and write css in object way</Heading2>
+
+    {/* Button using styled-component */}
+    <Btn>Styled-component</Btn> <br />
+    <Btn>Button two</Btn>
     </>
   )
 }

@@ -15,6 +15,14 @@ function App() {
     background-color:gray;
     border:1px solid black;
     `;
+
+    // In object way to write Style-componet
+    const Heading2 = styled.h2 (
+      {
+        color:"purple",
+        backgroundColor:"gray",
+      }
+    )
   return (
     <>
     <h1>Styled-Component In React-js</h1>
@@ -31,6 +39,9 @@ function App() {
       Ducimus ullam nam, quaerat est cumque deleniti, iusto dignissimos voluptatibus, explicabo sed neque enim in quod totam? Optio fugiat ipsa voluptatibus atque iusto. Asperiores, vero tempore est explicabo qui beatae.
       Quo natus numquam ipsum quam optio porro illum assumenda amet ratione ullam debitis sequi ducimus perferendis, reprehenderit sit in ad saepe rem aspernatur facere. Doloribus pariatur cum optio quisquam tenetur.
     </Paragraph>
+
+    {/* styled-component heading using boject */}
+    <Heading2>This is a Heading Created by Styled-component and write css in object way</Heading2>
     </>
   )
 }

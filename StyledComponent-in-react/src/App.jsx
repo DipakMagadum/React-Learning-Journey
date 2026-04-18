@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from "styled-components"
-function App() {
+import Navbar from "./Navbar.jsx"
 
-    // if you want to use styled-component then  you have to write the first letter variable in capital 
+ // if you want to use styled-component then  you have to write the first letter variable in capital 
     const Heading = styled.h1`
     text-align:center;
     color:cyan;
@@ -30,8 +30,10 @@ function App() {
     border:1px solid green;
     cursor:pointer;
     `
+function App() {
   return (
     <>
+    <Navbar />
     <h1>Styled-Component In React-js</h1>
     {/* Styled-Component Heading */}
     <Heading> This heading is created by using styled-component</Heading>

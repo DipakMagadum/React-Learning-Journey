@@ -1,16 +1,44 @@
-# React + Vite
+## useState Hook in React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+In this project, I used the **useState hook** to manage state inside functional components. It is one of the most commonly used hooks in React and is useful for handling dynamic data in the UI.
 
-Currently, two official plugins are available:
+### Why I used useState
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+While building interactive components, I needed a way to update values on user actions (like button clicks or input changes). The useState hook made it simple to store and update these values without using class components.
 
-## React Compiler
+### What I implemented
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Managed simple state values like toggling content and updating text
+* Used useState for handling user interactions (e.g., button clicks)
+* Implemented conditional rendering based on state
+* Updated UI dynamically when state changes
 
-## Expanding the ESLint configuration
+### Key benefits I noticed
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Easy to understand and use
+* Makes components interactive
+* Helps in managing local component state
+* Reduces the need for complex logic
+
+### Example
+
+Here’s a simple example of how I used useState:
+
+```js id="p4nq0x"
+import React, { useState } from "react";
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increase</button>
+    </>
+  );
+}
+```
+
+### My learning
+
+Working with useState helped me understand how React updates the UI based on state changes. It also improved my understanding of building interactive and dynamic components, which is essential for modern frontend development.

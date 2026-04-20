@@ -26,9 +26,9 @@ function App() {
       Porro sequi facilis officiis animi sed et dolor repellat voluptates fugiat quia labore assumenda modi quaerat consequuntur fugit nulla, in quod veniam atque excepturi nisi a. Quidem cum beatae ipsum.
       Perferendis sapiente eligendi asperiores id dicta. Esse facere reprehenderit delectus dolore quaerat modi voluptas qui doloribus veritatis sequi vel voluptate blanditiis explicabo ducimus, similique obcaecati aliquid praesentium culpa? Eos, odit.</p>
       <div className="flex justify-center gap-2">
-         <button  onClick={changeColor} className=" text-white bg-slate-700 p-2 rounded">Change textColor</button>
-         <button onClick={changeBgColor} className=" text-white bg-slate-700 p-2 rounded">Change Background</button>
-         <button onClick={changeSize} className=" text-white bg-slate-700 p-2 rounded">Change textSize</button>
+         <button  onClick={changeColor} className=" text-white bg-sky-500 p-2 rounded">Change textColor</button>
+         <button onClick={changeBgColor} className=" text-white bg-sky-500 p-2 rounded">Change Background</button>
+         <button onClick={changeSize} className=" text-white bg-sky-500 p-2 rounded">Change textSize</button>
       </div>
     </div>
     

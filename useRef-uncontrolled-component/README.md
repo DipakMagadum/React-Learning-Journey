@@ -1,16 +1,13 @@
-# React + Vite
+## Concept: useRef with Uncontrolled Components
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+In React, `useRef` is used to directly access DOM elements.
 
-Currently, two official plugins are available:
+When we use `useRef` with form inputs, it becomes an uncontrolled component. This means the input values are not managed by React state, instead we read them directly from the DOM.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Each input is connected to a ref using the `ref` attribute. We can then access its value using `ref.current.value`.
 
-## React Compiler
+For radio buttons, we use `ref.current.checked` to check which option is selected.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+For checkboxes, we check each input using `checked` and collect all selected values into an array.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This approach is useful when we don’t need re-rendering on every input change and just want to get values when the form is submitted.

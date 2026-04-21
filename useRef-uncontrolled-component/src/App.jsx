@@ -8,6 +8,11 @@ function App() {
     e.preventDefault();
     nameRef.current.style.color="red";
     passwordRef.current.style.color="red";
+
+    const userName = nameRef.current.value;
+    const password = passwordRef.current.value;
+
+    alert(`username is ${userName} and password is ${password}`)
    }
   return (
     <>

@@ -3,7 +3,7 @@ function App() {
   const nameRef = useRef(null);
   const passwordRef = useRef(null);
   const maleRef = useRef(null);
-  const FemaleRef = useRef(null);
+  const femaleRef = useRef(null);
 
   const FormHandler = (e) => {
     e.preventDefault();
@@ -17,8 +17,8 @@ function App() {
 
     if (maleRef.current.checked) {
       genderSelector = maleRef.current.value;
-    } else if (FemaleRef.current.checked) {
-      genderSelector = FemaleRef.current.value;
+    } else if (femaleRef.current.checked) {
+      genderSelector = femaleRef.current.value;
     }
     alert(
       `username is ${userName} and password is ${password} and gender is ${genderSelector}`,
@@ -51,7 +51,9 @@ function App() {
           />
 
           {/* radioButton */}
-          <h1 className="bg-purple-400  p-1 ">Getting Value From RadioButtons</h1>
+          <h1 className="bg-purple-400  p-1 ">
+            Getting Value From RadioButtons
+          </h1>
           <label>Gender</label>
           <div className="flex  gap-2">
             <input
@@ -67,7 +69,7 @@ function App() {
               type="radio"
               value="Female"
               name="gender"
-              ref={FemaleRef}
+              ref={femaleRef}
             />
             Female
           </div>

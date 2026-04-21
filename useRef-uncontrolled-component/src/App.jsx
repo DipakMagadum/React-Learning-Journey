@@ -1,18 +1,30 @@
 import { useRef } from "react";
 function App() {
+  // name and password ref
   const nameRef = useRef(null);
   const passwordRef = useRef(null);
+
+  // gender ref radio buttons
   const maleRef = useRef(null);
   const femaleRef = useRef(null);
 
+  // skills ref checkbox
+  const reactRef = useRef(null);
+  const javaRef = useRef(null);
+  const javascriptRef = useRef(null);
+  const sqlRef = useRef(null);
+
+  // formhandler onSubmit
   const FormHandler = (e) => {
     e.preventDefault();
+    // name and password useRef
     nameRef.current.style.color = "red";
     passwordRef.current.style.color = "red";
 
     const userName = nameRef.current.value;
     const password = passwordRef.current.value;
 
+    // selected radio button Checking condition
     let genderSelector = "";
 
     if (maleRef.current.checked) {
@@ -20,9 +32,27 @@ function App() {
     } else if (femaleRef.current.checked) {
       genderSelector = femaleRef.current.value;
     }
+
+    //  selected checkbox checking condition
+    let selectedSkills = [];
+
+    if (reactRef.current.checked) {
+      selectedSkills.push(reactRef.current.value);
+    }
+    if (javaRef.current.checked) {
+      selectedSkills.push(javaRef.current.value);
+    }
+    if (javascriptRef.current.checked) {
+      selectedSkills.push(javascriptRef.current.value);
+    }
+    if (sqlRef.current.checked) {
+      selectedSkills.push(sqlRef.current.value);
+    }
     alert(
       `username is ${userName} and password is ${password} and gender is ${genderSelector}`,
     );
+
+    alert(`Selected Skills Are ${selectedSkills}`);
   };
   return (
     <>
@@ -74,17 +104,17 @@ function App() {
             Female
           </div>
           {/* CheckBox */}
-        <h1 className="bg-purple-400  p-1 ">
-            Getting Value From Checkbox
-          </h1>
+          <h1 className="bg-purple-400  p-1 ">Getting Value From Checkbox</h1>
           <label>Skills</label>
           <div className="flex gap-2">
-            <input type="checkbox" value="java"/>React
-             <input type="checkbox" value="java"/>Java
-             <input type="checkbox" value="java"/>JavaScript
-             <input type="checkbox" value="java"/>SQL
-
-
+            <input type="checkbox" value="React" ref={reactRef} />
+            React
+            <input type="checkbox" value="java" ref={javaRef} />
+            Java
+            <input type="checkbox" value="JavaScript" ref={javascriptRef} />
+            JavaScript
+            <input type="checkbox" value="SQL" ref={sqlRef} />
+            SQL
           </div>
 
           <button className="bg-sky-500 rounded-lg p-1 text-white">

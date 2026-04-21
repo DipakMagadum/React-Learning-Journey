@@ -31,7 +31,7 @@ function App() {
           action=""
           method="Post"
           onSubmit={FormHandler}
-          className="flex flex-col bg-white shadow-2xl w-90 px-5 py-3  gap-2 rounded-lg border border-gray-300"
+          className="flex flex-col bg-white shadow-2xl w-99 px-5 py-3  gap-2 rounded-lg border border-gray-300"
         >
           <h1 className="bg-purple-400  p-1">Getting Value From TextBox</h1>
           <label>Name</label>
@@ -72,6 +72,19 @@ function App() {
               ref={femaleRef}
             />
             Female
+          </div>
+          {/* CheckBox */}
+        <h1 className="bg-purple-400  p-1 ">
+            Getting Value From Checkbox
+          </h1>
+          <label>Skills</label>
+          <div className="flex gap-2">
+            <input type="checkbox" value="java"/>React
+             <input type="checkbox" value="java"/>Java
+             <input type="checkbox" value="java"/>JavaScript
+             <input type="checkbox" value="java"/>SQL
+
+
           </div>
 
           <button className="bg-sky-500 rounded-lg p-1 text-white">

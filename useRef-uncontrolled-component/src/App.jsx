@@ -64,7 +64,7 @@ function App() {
           className="flex flex-col bg-white shadow-2xl w-99 px-5 py-3  gap-2 rounded-lg border border-gray-300"
         >
           <h1 className="bg-purple-400  p-1">Getting Value From TextBox</h1>
-          <label>Name</label>
+          <label className="text-gray-500">Name</label>
           <input
             className="border border-black rounded p-1"
             type="text"
@@ -72,7 +72,7 @@ function App() {
             placeholder="name"
           />
 
-          <label>Password</label>
+          <label className="text-gray-500">Password</label>
           <input
             className="border border-black rounded p-1"
             type="password"
@@ -84,7 +84,7 @@ function App() {
           <h1 className="bg-purple-400  p-1 ">
             Getting Value From RadioButtons
           </h1>
-          <label>Gender</label>
+          <label className="text-gray-500">Gender</label>
           <div className="flex  gap-2">
             <input
               className="cursor-pointer"
@@ -105,7 +105,7 @@ function App() {
           </div>
           {/* CheckBox */}
           <h1 className="bg-purple-400  p-1 ">Getting Value From Checkbox</h1>
-          <label>Skills</label>
+          <label className="text-gray-500">Skills</label>
           <div className="flex gap-2">
             <input type="checkbox" value="React" ref={reactRef} />
             React

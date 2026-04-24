@@ -3,11 +3,11 @@ import {useState} from "react"
 function App() {
 
     const [name, setName] = useState("");
-    const [surname, setSurname] = useState("");
+    const [lastname, setLastname] = useState("");
 
     const clearText = ()=>{
       setName("")
-      setSurname("")
+      setLastname("")
     }
   return (
     <>
@@ -28,10 +28,10 @@ function App() {
         {/* last name input textbox */}
          <Textbox
           placeholder="Enter Your last name"
-          value={surname}
-          onChange={(e)=>setSurname(e.target.value)}
+          value={lastname}
+          onChange={(e)=>setLastname(e.target.value)}
         />
-        <h3>{surname}</h3>
+        <h3>{lastname}</h3>
        <button 
        type="button"
         className="bg-purple-500 p-1 text-white font-semibold text-xl rounded-xl"

@@ -1,3 +1,4 @@
+import Checkbox from "./Component/Checkbox";
 import Textbox from "./Component/Textbox"
 import {useState} from "react"
 function App() {
@@ -36,6 +37,10 @@ function App() {
        type="button"
         className="bg-purple-500 p-1 text-white font-semibold text-xl rounded-xl"
         onClick={clearText}>Clear</button>
+
+        {/* checkbox Handling */}
+         <h1 className="text-center bg-sky-500 p-1 font-semibold">CheckBox</h1>
+         <Checkbox/>
       </form>
        
     </div>

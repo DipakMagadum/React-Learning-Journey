@@ -1,6 +1,11 @@
 import React from 'react'
-
+import {useState} from "react"
 function Checkbox() {
+
+  const [skills, setSkills] = useState("");
+  const handleSkills = (e)=>{
+    console.log(e.target.value,e.target.checked);
+  } 
   return (
     <>
     <div className="flex gap-3">
@@ -8,21 +13,21 @@ function Checkbox() {
       <label
     htmlFor="javaScript">JavaScript
     <input
-      className=""
+       onChange={handleSkills}
     type="checkbox" value="javaScript" id="javaScript" />
     </label>
 
     <label
     htmlFor="react">React
     <input
-      className=""
+      onChange={handleSkills}
     type="checkbox" value="react" id="react" />
     </label>
 
     <label
     htmlFor="java">Java
     <input
-      className=""
+     onChange={handleSkills}
     type="checkbox" value="java" id="java" />
     </label>
     </div>

@@ -4,7 +4,14 @@ function Checkbox() {
 
   const [skills, setSkills] = useState("");
   const handleSkills = (e)=>{
-    console.log(e.target.value,e.target.checked);
+    // console.log(e.target.value,e.target.checked);
+
+    if(e.target.checked){
+      setSkills([...skills,e.target.value])
+    }
+    else{
+      setSkills([...skills.filter((item)=>item!=e.target.value)])
+    }
   } 
   return (
     <>
@@ -31,6 +38,7 @@ function Checkbox() {
     type="checkbox" value="java" id="java" />
     </label>
     </div>
+    <div className="flex flex-col"><h4>{skills}</h4></div>
     </>
   )
 }

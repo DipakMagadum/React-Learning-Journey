@@ -28,14 +28,14 @@ function Checkbox() {
     htmlFor="react">React
     <input
       onChange={handleSkills}
-    type="checkbox" value="react" id="react" />
+    type="checkbox" value="React" id="react" />
     </label>
 
     <label
     htmlFor="java">Java
     <input
      onChange={handleSkills}
-    type="checkbox" value="java" id="java" />
+    type="checkbox" value="Java" id="java" />
     </label>
     </div>
     <div className="flex flex-col"><h4>{skills}</h4></div>

@@ -13,24 +13,26 @@ function RadioButton() {
    <div className="flex gap-5">
 
     {/* radiobutton for male */}
-    <label htmlFor="male">Male
-        <input type="radio"
+    <label >Male
+        <input
+         type="radio"
          value={"Male"}
-          name="Gen"
-           id="male"
+          name="gender"
+           checked={gender === "Male"}
            onChange={handleGender}/>
     </label>
 
     {/* radiobutton for female */}
-    <label htmlFor="female">Female
-        <input type="radio"
+    <label >Female
+        <input 
+        type="radio"
          value={"Female"} 
-         name="Gen"
-          id="female"
+         name="gender"
+           checked={gender === "Female"}
            onChange={handleGender}/>
     </label>
    </div>
-   <h4>You are:{gender}</h4>
+   <h4>You are: {gender}</h4>
    </>
   )
 }

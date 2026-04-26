@@ -1,5 +1,6 @@
 import Checkbox from "./Component/Checkbox";
-import Textbox from "./Component/Textbox"
+import Textbox from "./Component/Textbox";
+import RadioButton from "./Component/RadioButton";
 import {useState} from "react"
 function App() {
 
@@ -41,6 +42,10 @@ function App() {
         {/* checkbox Handling */}
          <h1 className="text-center bg-sky-500 p-1 font-semibold">CheckBox</h1>
          <Checkbox/>
+
+         {/* radioButton Handling */}
+          <h1 className="text-center bg-sky-500 p-1 font-semibold">RadioButton</h1>
+          <RadioButton/>
       </form>
        
     </div>

@@ -2,6 +2,7 @@ import Checkbox from "./Component/Checkbox";
 import Textbox from "./Component/Textbox";
 import RadioButton from "./Component/RadioButton";
 import {useState} from "react"
+import DropDown from "./Component/DropDown";
 function App() {
 
     const [name, setName] = useState("");
@@ -46,6 +47,10 @@ function App() {
          {/* radioButton Handling */}
           <h1 className="text-center bg-sky-500 p-1 font-semibold">RadioButton</h1>
           <RadioButton/>
+
+          {/* dropdown menu handling */}
+          <h1 className="text-center bg-sky-500 p-1 font-semibold">DropDown Menu</h1>
+          <DropDown/>
       </form>
        
     </div>

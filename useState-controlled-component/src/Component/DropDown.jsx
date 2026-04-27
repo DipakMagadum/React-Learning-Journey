@@ -10,7 +10,7 @@ function DropDown() {
   return (
    <>
    <label >Select City</label>
-   <select onChange={handleCity}>
+   <select   value={city} onChange={handleCity}>
     <option value="pune">Pune</option>
     <option value="mumbai">Mumbai</option>
     <option value="delhi">Delhi</option>

@@ -37,7 +37,7 @@ function App() {
         <h3>{lastname}</h3>
        <button 
        type="button"
-        className="bg-purple-500 p-1 text-white font-semibold text-xl rounded-xl"
+        className="bg-orange-500 p-1 text-white font-semibold text-xl rounded-xl"
         onClick={clearText}>Clear</button>
 
         {/* checkbox Handling */}

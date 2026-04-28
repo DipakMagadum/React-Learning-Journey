@@ -15,6 +15,8 @@ function DropDown() {
     <option value="mumbai">Mumbai</option>
     <option value="delhi">Delhi</option>
     <option value="kolhapur">Kolhapur</option>
+    <option value="nashik">Nashik</option>
+    <option value="hydrabad">Hydrabad</option>
    </select>
    <h4> selected city is : {city}</h4>
    </>

@@ -31,6 +31,15 @@ function RadioButton() {
            checked={gender === "Female"}
            onChange={handleGender}/>
     </label>
+    {/* radiobutton for other */}
+     <label >Other
+        <input 
+        type="radio"
+         value={"Other"} 
+         name="gender"
+           checked={gender === "Other"}
+           onChange={handleGender}/>
+    </label>
    </div>
    <h4>You are: {gender}</h4>
    </>

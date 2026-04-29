@@ -1,5 +1,8 @@
 import {useEffect} from "react";
+import {useState} from "react";
 function App() {
+
+  const [userData, setUserData] = useState([]);
 
     useEffect(()=>{
       getAllData();
@@ -12,11 +15,13 @@ function App() {
       let response = await fetch(url);
       response = await response.json();
       console.log(response);
+
+      setUserData(response)
     }
   return (
     <>
       <h1 className="text-center bg-sky-500 mt-5 p-3 text-white font-semibold text-2xl ">
-        Fetch and Display From API Using Get Method
+        What is API ??
       </h1>
       <p className="p-3 bg-slate-400 text-2xl mt-5">
         API (Application Programming Interface) म्हणजे दोन वेगवेगळ्या software
@@ -32,7 +37,23 @@ function App() {
         kitchen मध्ये न जाता waiter कडे order देतो, आणि तोच आपल्यासाठी food आणतो
         — तसंच software मध्ये API दोन systems मध्ये मध्यस्थ म्हणून काम करतं.
       </p>
-
+ <h1 className="text-center bg-sky-500 mt-5 p-3 text-white font-semibold text-2xl ">
+        Fetch and Display From API Using Get Method
+      </h1>
+      {
+        userData.map((users)=>(
+         <div className="p-2">
+           <ul>
+            <li>{users.id}</li>
+            <li>{users.name}</li>
+            <li>{users.email}</li>
+            <li>{users.username}</li>
+            <hr />
+            <hr />
+          </ul>
+         </div>
+        ))
+      }
     </>
   );
 }

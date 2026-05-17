@@ -2,6 +2,7 @@ import Button from "./Components/Button";
 import { Email } from "./Components/Email";
 import { Input } from "./Components/Input";
 import {Password} from "./Components/Password"
+import { Link } from "react-router-dom";
 export function Register(){
     return(
         <>
@@ -27,6 +28,8 @@ export function Register(){
            <Button
            name="Register"
            />
+
+          <span className="mt-2 text-sky-600 hover:underline"> <Link to="/login">Already Register?Login</Link></span>
 
             </form>
         </div>

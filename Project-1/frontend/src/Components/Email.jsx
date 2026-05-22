@@ -4,10 +4,16 @@ export function Email({label}){
     const[error,setError] = useState("");
 
     useEffect(()=>{
+ const emailPattern =
+            /^[a-z][a-zA-Z0-9._%+-]*@(gmail\.com|yahoo\.com|outlook\.com)$/;
 
+        
         if(email === ""){
             setError("Enter Email")
         }
+        else if (!emailPattern.test(email)){
+            setError("Enter Valid Email")
+        } 
         else{
             setError("")
         }

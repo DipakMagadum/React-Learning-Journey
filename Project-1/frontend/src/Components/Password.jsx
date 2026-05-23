@@ -8,6 +8,9 @@ export function Password({label}){
         if(password === ""){
             setError("Enter Password")
         }
+        else if(password.length < 6){
+            setError("password must be atleas 6 character long")
+        }
         else{
             setError("")
         }
